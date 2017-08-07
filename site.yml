@@ -1,0 +1,14 @@
+---
+# This playbook deploys a simple standalone Tomcat 7 server.
+
+- hosts: qa
+  remote_user: root
+  become: yes
+  become_method: sudo
+  
+  vars_files:
+    - ./group_vars/qa-prod
+    
+  roles:
+    - selinux
+    - tomcat

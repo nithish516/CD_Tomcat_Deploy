@@ -6,6 +6,7 @@ rm -f ./ipaddress.txt ./ipaddress.txt
 cat ./ipaddress.txt
 cat ipaddress.txt | sed 's/^[ \t]*//;s/[ \t]*$//' > ./ipaddress1.txt
 cat ./ipaddress1.txt
-tail -1 ./ipaddress1.txt >> ./inventory
+#tail -1 ./ipaddress1.txt >> ./inventory
+ipaddress1.txt >> ./inventory
 cat ./inventory
 ansible-playbook -i ./inventory site.yml --limit $1

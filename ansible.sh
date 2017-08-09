@@ -1,5 +1,5 @@
 #!/bin/sh
-chmod 0400 ./AmazonInstances.pem
+chmod 0400 ./demo_ansible.pem
 echo "[$1]" >> ./inventory
 rm -f ./ipaddress.txt ./ipaddress.txt
 /root/.local/bin/aws ec2 describe-instances | grep PublicIpAddress | awk -F ":" '{print $2}' | sed -e 's/[",]//g' > ./ipaddress.txt

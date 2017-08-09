@@ -58,7 +58,7 @@
   
 - name: Download Artifact
   get_url: 
-    url: http://35.162.133.193:8080/nexus/content/repositories/releases/org/sonatype/mavenbook/multi/simple-webapp/1.0/simple-webapp-1.0.war
+    url: http://13.56.59.247:8080/nexus/content/repositories/releases/org/sonatype/mavenbook/multi/simple-webapp/1.0/simple-webapp-1.0.war
     dest: /opt/apache-tomcat-7.0.61/webapps/
     
     
